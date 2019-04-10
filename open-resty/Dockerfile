@@ -36,7 +36,7 @@ RUN apk add --no-cache --virtual .build-deps \
         make \
         autoconf \
         automake \
-    && /usr/local/openresty/luajit/bin/luarocks install lua-resty-auto-ssl \
+    && /usr/local/openresty/luajit/bin/luarocks install lua-resty-auto-ssl lua-resty-limit-traffic \
     && apk del .build-deps \
     && rm -rf /usr/local/openresty/nginx/conf/* \
     && mkdir -p /var/cache/nginx
